@@ -1,23 +1,30 @@
 const app = Vue.createApp({
   data() {
     return {
-      items: [],
-      enteredValue: "",
+      books: [
+        {
+          author: "Robert Kiosaki",
+          name: "Boy ota kambag'al ota",
+          image: "./images/robert.png",
+          isFavourite: true,
+        },
+        {
+          author: "Abdulla Qodiriy",
+          name: "O'tgan kunlar",
+          image: "./images/abdulla.png",
+          isFavourite: true,
+        },
+        {
+          author: "Shayx Ioz",
+          name: "Baxtli bo'lmo uchun",
+          image: "./images/baxtli.png",
+          isFavourite: false,
+        },
+      ],
     };
   },
 
-  methods: {
-    addTodo() {
-      if (this.enteredValue == "") {
-        alert("Input is empty");
-      } else {
-        this.items.unshift(this.enteredValue);
-        this.enteredValue = "";
-      }
-    },
-  },
+  methods: {},
 });
-
-//  bu darsda todo list yasalgan
 
 app.mount("#app");
